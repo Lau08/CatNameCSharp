@@ -1,6 +1,7 @@
 using Model;
 using System;
 using System.IO;
+using System.Xml.Linq;
 
 public class Program
 {
@@ -20,7 +21,7 @@ public class Program
 
     static void NameCat(string catName)
     {
-        if (catName == "")
+        if (catName == "" || string.IsNullOrWhiteSpace(catName))
         {
             Console.WriteLine("Enter at least one character: ");
             catName = Console.ReadLine();
